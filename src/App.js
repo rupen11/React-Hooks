@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import State from './Components/State';
+import StateArray from './Components/StateArray';
+import StateObject from './Components/StateObject';
+import Sortcircuit from './Components/Sortcircuit';
+import Form from './Components/Form/Form';
+import Useeffect1 from './Components/Effect/Useeffect1';
+import Effectapi from './Components/Effectapi';
+import Ref from './Components/Ref';
+import Reducer from './Components/Reducer';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <State /> */}
+      {/* <StateArray /> */}
+      {/* <StateObject /> */}
+      {/* <Sortcircuit /> */}
+      <Form />
+      {/* <Useeffect1 /> */}
+      {/* <Effectapi /> */}
+      {/* <Ref /> */}
+      {/* <Reducer /> */}
+    </>
   );
 }
 
