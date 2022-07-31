@@ -21,7 +21,7 @@ function App() {
       {/* <Useeffect1 /> */}
       {/* <Effectapi /> */}
       {/* <Ref /> */}
-      {/* <Reducer /> */}
+      <Reducer />
     </>
   );
 }

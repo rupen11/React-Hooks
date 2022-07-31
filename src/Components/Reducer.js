@@ -2,6 +2,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import React, { useReducer } from 'react';
+
 const initialState = 0;
 const reducer = (state, action) => {
     console.log(state, action);
@@ -22,6 +23,7 @@ const reducer = (state, action) => {
 const Reducer = () => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
+    console.log(stat
 
     return (
         <>
