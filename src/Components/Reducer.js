@@ -23,7 +23,7 @@ const reducer = (state, action) => {
 const Reducer = () => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
-    console.log(stat
+    console.log(state);
 
     return (
         <>
