@@ -3,15 +3,18 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import React, { useReducer } from 'react';
 
-const initialState = 0;
+const init = (initialState = 0) => {
+    return { count: initialState };
+}
+
 const reducer = (state, action) => {
     console.log(state, action);
     if (action.type === "INCREMENT") {
-        return state + 1;
+        return { count: state.count + 1 };
     }
     if (action.type === "DECREMENT") {
         if (state > 0) {
-            return state - 1;
+            return { count: state.count - 1 };
         }
         else {
             alert("0");
@@ -20,9 +23,9 @@ const reducer = (state, action) => {
     return state;
 }
 
-const Reducer = () => {
+const Reducer = ({ initialState }) => {
 
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState, init);
     console.log(state);
 
     return (
@@ -31,7 +34,7 @@ const Reducer = () => {
                 <IconButton aria-label="remove" className="btncontainer">
                     <RemoveIcon onClick={() => { dispatch({ type: "DECREMENT" }) }} />
                 </IconButton>
-                <p className="count">{state}</p>
+                <p className="count">{state.count}</p>
                 <IconButton aria-label="add" className="btncontainer">
                     <AddIcon onClick={() => { dispatch({ type: "INCREMENT" }) }} />
                 </IconButton>
